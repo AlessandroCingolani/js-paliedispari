@@ -31,6 +31,7 @@ console.log(playerNumber);
 // get number random for computer
 let computerNumber = randomGen(1,5)
 
+// function for return paro or disparo
 let result = pariDispari(playerNumber,computerNumber)
 
 // sum for message in DOM
