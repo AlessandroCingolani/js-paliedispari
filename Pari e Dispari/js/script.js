@@ -1,8 +1,8 @@
 let wordCheck = false;
 let numberCheck = false;
 const output = document.getElementById('output');
-let playerNumber 
-let playerPariDispari
+let playerNumber,playerPariDispari,sum; 
+
 
 // convalid pari or dispari
 do{
@@ -34,14 +34,12 @@ let computerNumber = randomGen(1,5)
 // function for return paro or disparo
 let result = pariDispari(playerNumber,computerNumber)
 
-// sum for message in DOM
-let somma = playerNumber + computerNumber;
 
 // check result
-if(result && playerPariDispari === 'pari' || !result && playerPariDispari === 'dispari' ){
-  output.innerHTML=( `il totale è ${somma}   Vince il giocatore`);
+if(result === playerPariDispari ){
+  output.innerHTML=( `il totale è ${sum}   Vince il giocatore`);
 }else{
-  output.innerHTML=( `il totale è ${somma}   Vince il computer`);
+  output.innerHTML=( `il totale è ${sum}   Vince il computer`);
 }
 console.log('numero computer ' + computerNumber);
 
@@ -49,16 +47,16 @@ console.log('numero computer ' + computerNumber);
  * somma numeri e controlla se è paro o disparo
  * @param {number} playerNumber 
  * @param {number} computerNumber
- * @returns number 
+ * @returns string 
  */
 function pariDispari(playerNumber,computerNumber){
-  let sum = playerNumber + computerNumber;
+  sum = playerNumber + computerNumber;
   if(sum % 2){
     console.log('il totale è disparo');
-    return false;
+    return 'dispari';
   }else{
     console.log('il totale è paro');
-    return true;
+    return 'pari';
   }
 }
 
