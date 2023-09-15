@@ -28,7 +28,8 @@ do{
 
 console.log(playerNumber);
 
-let computerNumber = randomGen()
+// get number random for computer
+let computerNumber = randomGen(1,5)
 
 let result = pariDispari(playerNumber,computerNumber)
 
@@ -57,8 +58,10 @@ function pariDispari(playerNumber,computerNumber){
 
 /**
  * estrae numero random per computer
+ * @param {number} min 
+ * @param {number} max
  * @returns number
  */
-function randomGen() {
-  return Math.floor(Math.random() * (5 - 1 +1))+ 1;
+function randomGen(min,max) {
+  return Math.floor(Math.random() * (max - min +1))+ min;
 }
