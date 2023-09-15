@@ -1,19 +1,22 @@
 let wordCheck = false;
+let insertedWord,result,output;
+
+
+ while(!wordCheck){
+   insertedWord = prompt('Inserire una parola con almeno 3 caratteri');
+   if (insertedWord.length >= 3 && isNaN(insertedWord)){
+    wordCheck = true;
+    result = palindroma(insertedWord)
+    output = (result) ? 'la parola è palindroma' : 'la parola NON è palindroma';
+   }else {
+    alert('Errore inserire parola lunga piu di 3 caratteri!')
+   }
+   console.log(output);
+ }
 
 
 
-// while(!wordCheck){
-//   let insertedWord = prompt('Inserire una parola con almeno 3 caratteri');
-//   if (insertedWord.length >= 3){
-//     wordCheck = true
-//   }
-// }
-
-const insertedWord = prompt('Inserire una parola con almeno 3 caratteri');
-
-let result = palindroma(insertedWord)
-
-const output = (result) ? 'la parola è palindroma' : 'la parola NON è palindroma';
+ 
 
 
 // function for check palindroma word
@@ -29,4 +32,4 @@ function palindroma(word) {
     return false
   }
 }
-console.log(output);
+
