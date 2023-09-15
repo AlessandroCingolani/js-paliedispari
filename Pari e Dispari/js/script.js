@@ -32,14 +32,14 @@ let computerNumber = randomGen()
 
 let result = pariDispari(playerNumber,computerNumber)
 
+let somma = playerNumber + computerNumber;
+
 if(result && playerPariDispari === 'pari' || !result && playerPariDispari === 'dispari' ){
-  output.innerHTML=('Vince il giocatore');
+  output.innerHTML=( `il totale è ${somma}   Vince il giocatore`);
 }else{
-  output.innerHTML=('Vince il Computer');
+  output.innerHTML=( `il totale è ${somma}   Vince il computer`);
 }
-
-
-console.log('totale ' + result);
+console.log('numero computer ' + computerNumber);
 
 /**
  * somma numeri e controlla se è paro o disparo
