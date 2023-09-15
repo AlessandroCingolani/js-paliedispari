@@ -52,8 +52,13 @@ console.log('numero computer ' + computerNumber);
  */
 function pariDispari(playerNumber,computerNumber){
   let sum = playerNumber + computerNumber;
-  if(sum % 2) return false;
-  return true;
+  if(sum % 2){
+    console.log('il totale è disparo');
+    return false;
+  }else{
+    console.log('il totale è paro');
+    return true;
+  }
 }
 
 
