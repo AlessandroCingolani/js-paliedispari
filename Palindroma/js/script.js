@@ -14,7 +14,7 @@ const insertedWord = prompt('Inserire una parola con almeno 3 caratteri');
 
 palindroma(insertedWord)
 
-
+const output = (paliValid) ? 'la parola è palindroma' : 'la parola non è palindroma';
 
 function palindroma(word) {
   let reverseWord=''
@@ -27,4 +27,4 @@ function palindroma(word) {
     return paliValid
   }
 }
-console.log(paliValid);
+console.log(output);
