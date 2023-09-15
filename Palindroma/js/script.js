@@ -1,5 +1,6 @@
 let wordCheck = false;
-let insertedWord,result,output;
+let insertedWord,result;
+const output = document.getElementById('output');
 
 
  while(!wordCheck){
@@ -7,11 +8,11 @@ let insertedWord,result,output;
    if (insertedWord.length >= 3 && isNaN(insertedWord)){
     wordCheck = true;
     result = palindroma(insertedWord)
-    output = (result) ? 'la parola è palindroma' : 'la parola NON è palindroma';
+    message = (result) ? 'La parola è palindroma' : 'la parola NON è palindroma';
    }else {
     alert('Errore inserire parola lunga piu di 3 caratteri!')
    }
-   console.log(output);
+   output.innerHTML = message;
  }
 
 
