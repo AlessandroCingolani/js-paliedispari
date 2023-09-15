@@ -33,8 +33,10 @@ let computerNumber = randomGen(1,5)
 
 let result = pariDispari(playerNumber,computerNumber)
 
+// sum for message in DOM
 let somma = playerNumber + computerNumber;
 
+// check result
 if(result && playerPariDispari === 'pari' || !result && playerPariDispari === 'dispari' ){
   output.innerHTML=( `il totale è ${somma}   Vince il giocatore`);
 }else{
